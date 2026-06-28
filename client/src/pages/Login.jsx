@@ -51,7 +51,7 @@ export default function Login() {
             <span className="login-label">Password</span>
             <input
               type="password"
-              placeholder="admin123"
+              placeholder="Minicrm@2026"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
