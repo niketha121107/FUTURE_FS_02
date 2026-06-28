@@ -212,6 +212,7 @@ export default function Dashboard() {
             <tr>
               <th>Name</th>
               <th>Email</th>
+              <th>Phone</th>
               <th>Source</th>
               <th>Status</th>
               <th>Created</th>
@@ -221,10 +222,11 @@ export default function Dashboard() {
           <tbody>
             {displayedLeads.map((lead) => (
               <tr key={lead._id}>
-                <td>{lead.name}</td>
-                <td>{lead.email}</td>
-                <td>{lead.source}</td>
-                <td>
+                <td data-label="Name">{lead.name}</td>
+                <td data-label="Email">{lead.email}</td>
+                <td data-label="Phone">{lead.phone || '—'}</td>
+                <td data-label="Source">{lead.source}</td>
+                <td data-label="Status">
                   {updatingIds.has(lead._id) ? (
                     <span className="updating-spinner">updating...</span>
                   ) : (
@@ -238,8 +240,8 @@ export default function Dashboard() {
                     </select>
                   )}
                 </td>
-                <td>{new Date(lead.createdAt).toLocaleDateString()}</td>
-                <td>
+                <td data-label="Created">{new Date(lead.createdAt).toLocaleDateString()}</td>
+                <td data-label="Action">
                   <Link to={`/leads/${lead._id}`}>View</Link>
                 </td>
               </tr>

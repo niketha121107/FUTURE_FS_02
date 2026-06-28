@@ -1,14 +1,16 @@
 :root {
-  --bg-page: #fbfaf7;
+  --bg-page: #f8f7f4;
   --bg-surface: #ffffff;
   --bg-surface-muted: #f3f1ea;
+  --bg-surface-hover: #f0efea;
   --border-subtle: #e8e5dc;
   --border-default: #d8d4c8;
-  --text-primary: #1f2421;
+  --text-primary: #1a1d1a;
   --text-secondary: #6e6a5f;
   --text-tertiary: #8a8678;
 
   --accent: #0F6E56;
+  --accent-hover: #0b5a46;
   --accent-soft-bg: #E1F5EE;
   --accent-soft-text: #04342C;
 
@@ -20,9 +22,26 @@
   --status-converted-text: #4A1B0C;
 
   --danger: #993C1D;
+  --danger-hover: #7f3016;
   --danger-soft-bg: #FAECE7;
 
-  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.14);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   font-family: var(--sans);
   font-size: 15px;
@@ -33,6 +52,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 * {
@@ -43,6 +63,11 @@
 
 body {
   margin: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 #root {
